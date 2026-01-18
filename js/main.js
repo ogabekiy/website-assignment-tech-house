@@ -340,16 +340,44 @@ function renderStars(rating) {
 function productCard(p) {
     return `
         <div class="product-card">
-         <a href="product.html?id=${p.id}" style="text-decoration: none">
-            <img src="${p.img_url}" alt="${p.name}">
-            <h3>${p.name}</h3>
-            <div class="stars">${renderStars(p.rating)}</div>
-            <p class="price">${p.price.toLocaleString()} so'm</p>
-            <p class="stock">Omborda: ${p.stock} ta</p>
-        </a>
+            <a href="product.html?id=${p.id}" style="text-decoration:none">
+                <img src="${p.img_url}" alt="${p.name}">
+                <h3>${p.name}</h3>
+                <div class="stars">${renderStars(p.rating)}</div>
+                <p class="price">${p.price.toLocaleString()} so'm</p>
+                <p class="stock">Omborda: ${p.stock} ta</p>
+            </a>
+
+            <button class="btn-cart" onclick="addToCart(${p.id})">
+                🛒 Savatga qo‘shish
+            </button>
         </div>
     `;
 }
+function addToCart(id) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const product = products.find(p => p.id === id);
+    if (!product) return;
+
+    const existing = cart.find(item => item.id === id);
+
+    if (existing) {
+        existing.qty += 1;
+    } else {
+        cart.push({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            img_url: product.img_url,
+            qty: 1
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Mahsulot savatga qo‘shildi 🛒");
+}
+
 
 /* ===== 1. OMMABOP (TOP 6 RATING) ===== */
 function renderPopularProducts() {
