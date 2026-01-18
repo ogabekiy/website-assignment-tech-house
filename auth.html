@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Kirish | Tech House</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<main class="auth-container">
+
+    <div class="auth-card">
+        <h1>Tizimga kirish</h1>
+        <p class="auth-subtitle">
+            Tech House akkauntingizga kiring
+        </p>
+
+        <form id="loginForm">
+
+            <label>Foydalanuvchi nomi</label>
+            <input
+                type="text"
+                id="username"
+                placeholder="user"
+                required
+            >
+
+            <label>Parol</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="1111"
+                required
+            >
+
+            <button type="submit" class="btn">
+                Kirish
+            </button>
+
+            <p id="loginMessage" class="login-message"></p>
+
+        </form>
+    </div>
+
+</main>
+
+<script src="./js/auth.js"></script>
+</body>
+</html>

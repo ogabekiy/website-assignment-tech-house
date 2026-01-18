@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech House</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+</head>
+<body>
+
+    <!-- ===== FIXED NAVBAR ===== -->
+    <header class="navbar">
+
+        <!-- Top bar -->
+        <div class="top-bar">
+            <div class="container top-content">
+                <span><i class="fa-solid fa-location-dot"></i> Toshkent</span>
+                <span><i class="fa-solid fa-phone"></i> aloqa uchun: +998 90 567 07 33</span>
+            </div>
+        </div>
+
+        <!-- Main bar -->
+        <div class="main-bar">
+            <div class="container main-content">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="/" style="text-decoration: none">
+                     <span >Tech House</span>
+                    </a>
+                </div>
+
+                <!-- Search -->
+                <div class="search-box">
+                    <input type="text" placeholder="search for products...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <!-- Icons -->
+                <div class="nav-icons">
+                   <a href="/likes.html"> <i class="fa-regular fa-heart"></i></a>
+                    <a href="/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="/auth.html"><i class="fa-regular fa-user"></i></a>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+
+
+    <!-- ===== HEADER SLIDER ===== -->
+        <section class="header-slider">
+            <div class="slider-wrapper" id="sliderWrapper"></div>
+        
+            <button class="slider-btn prev" id="prevBtn">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn next" id="nextBtn">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </section>
+
+    
+        <!-- ===== CATEGORIES ===== -->
+        <section class="categories-section">
+            <div class="container">
+                <h2 class="section-title">Kategoriyalar</h2>
+            
+                <div class="categories-grid" id="categoriesGrid">
+                    <!-- JS orqali categorylar keladi -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== POPULAR PRODUCTS ===== -->
+<section class="products-section">
+    <div class="container">
+        <h2 class="section-title">Ommabop mahsulotlar</h2>
+        <div class="products-grid" id="popularProducts"></div>
+    </div>
+</section>
+
+<!-- ===== NEW PRODUCTS ===== -->
+<section class="products-section">
+    <div class="container">
+        <h2 class="section-title">Yangi mahsulotlar</h2>
+        <div class="products-grid" id="newProducts"></div>
+    </div>
+</section>
+
+<!-- ===== ALL PRODUCTS ===== -->
+<section class="products-section">
+    <div class="container">
+        <h2 class="section-title">Barcha mahsulotlar</h2>
+        <div class="products-grid grid-12" id="allProducts"></div>
+    </div>
+</section>
+
+<!-- ===== A'ZOLIK REJALARI ===== -->
+<section class="membership">
+    <div class="container">
+        <h2 class="membership-title">A’zolik Rejalari</h2>
+        <p class="membership-subtitle">
+            A’zolik dasturimizga qo‘shiling va barcha xaridlaringiz uchun
+            maxsus imtiyozlar, mukofotlar hamda qulay narxlardan foydalaning.
+        </p>
+
+        <div class="plans">
+
+            <!-- Bronze -->
+            <div class="plan-card">
+                <h3>Bronza</h3>
+                <div class="membership-price">
+                    $0 <span>/yil</span>
+                </div>
+
+                <ul>
+                    <li>$50 dan yuqori buyurtmalar uchun bepul yetkazib berish</li>
+                    <li>Xaridlardan 5% bonus ball</li>
+                    <li>Standart mijozlarni qo‘llab-quvvatlash</li>
+                </ul>
+
+                <button class="btn blue">Rejani tanlash</button>
+            </div>
+
+            <!-- Silver -->
+            <div class="plan-card popular">
+                <span class="badge">Eng ommabop</span>
+
+                <h3>Kumush</h3>
+                <div class="membership-price">
+                    $49 <span>/yil</span>
+                </div>
+
+                <ul>
+                    <li>Barcha buyurtmalar uchun bepul yetkazib berish</li>
+                    <li>Xaridlardan 10% bonus ball</li>
+                    <li>Ustuvor mijozlarni qo‘llab-quvvatlash</li>
+                    <li>A’zolarga maxsus chegirmalar</li>
+                </ul>
+
+                <button class="btn orange">Rejani tanlash</button>
+            </div>
+
+            <!-- Gold -->
+            <div class="plan-card">
+                <h3>Oltin</h3>
+                <div class="membership-price">
+                    $99 <span>/yil</span>
+                </div>
+
+                <ul>
+                    <li>Bepul yetkazib berish va o‘rnatib berish</li>
+                    <li>Xaridlardan 15% bonus ball</li>
+                    <li>VIP mijozlarni qo‘llab-quvvatlash</li>
+                    <li>Kengaytirilgan kafolat</li>
+                    <li>Aksiyalarga erta kirish</li>
+                </ul>
+
+                <button class="btn blue">Rejani tanlash</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== ABOUT TECH HOUSE ===== -->
+<!-- ===== TECH HOUSE ADVANTAGES ===== -->
+<section class="advantages">
+    <div class="container">
+
+        <h2 class="advantages-title">Nega aynan Tech House?</h2>
+        <p class="advantages-subtitle">
+            Biz mijozlarimiz uchun qulaylik, ishonch va sifatni birinchi o‘ringa qo‘yamiz.
+        </p>
+
+        <div class="advantage-list">
+
+            <div class="advantage-item">
+                <div class="adv-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="adv-content">
+                    <h3>Sifat va ishonch</h3>
+                    <p>
+                        Har bir mahsulot rasmiy kafolatga ega bo‘lib,
+                        sotuvdan oldin qat’iy sifat tekshiruvlaridan o‘tkaziladi.
+                    </p>
+                </div>
+            </div>
+
+            <div class="advantage-item">
+                <div class="adv-icon">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <div class="adv-content">
+                    <h3>Tez va qulay yetkazib berish</h3>
+                    <p>
+                        Buyurtmalar O‘zbekiston bo‘ylab qisqa muddatda,
+                        xavfsiz va ishonchli tarzda yetkazib beriladi.
+                    </p>
+                </div>
+            </div>
+
+            <div class="advantage-item">
+                <div class="adv-icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <div class="adv-content">
+                    <h3>24/7 qo‘llab-quvvatlash</h3>
+                    <p>
+                        Savollaringiz bo‘lsa, bizning mutaxassislarimiz
+                        sizga kunu tun yordam berishga tayyor.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-col">
+            <h3 class="footer-logo">Tech House</h3>
+            <p class="footer-text">
+                Tech House — zamonaviy elektronika va maishiy texnika mahsulotlarini
+                ishonchli va qulay narxlarda taklif etuvchi onlayn do‘kon.
+            </p>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-col">
+            <h4>Ma’lumotlar</h4>
+            <ul>
+                <li><a href="#">Biz haqimizda</a></li>
+                <li><a href="#">Yetkazib berish</a></li>
+                <li><a href="#">Qaytarish siyosati</a></li>
+                <li><a href="#">Kafolat</a></li>
+            </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="footer-col">
+            <h4>Kategoriyalar</h4>
+            <ul>
+                <li><a href="#">Changyutgichlar</a></li>
+                <li><a href="#">Isitgichlar</a></li>
+                <li><a href="#">Muzlatgichlar</a></li>
+                <li><a href="#">Telefonlar</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+            <h4>Aloqa</h4>
+            <ul class="footer-contact">
+                <li><i class="fa-solid fa-location-dot"></i> Toshkent, O‘zbekiston</li>
+                <li><i class="fa-solid fa-phone"></i> +998 90 567 07 33</li>
+                <li><i class="fa-solid fa-envelope"></i> info@techhouse.uz</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+        <p>© 2026 Tech House. Barcha huquqlar himoyalangan.</p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+    <script src="./js/slider.js" defer></script>
+    <script src="./js/main.js" defer></script>
+</body>
+</html>
