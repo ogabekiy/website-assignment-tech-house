@@ -296,6 +296,20 @@ const products = [
         categoryId: 6
     }
 ];
+const navbarSearch = document.getElementById("navbarSearch");
+
+if (navbarSearch) {
+    navbarSearch.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+            const value = navbarSearch.value.trim();
+            if (value) {
+                window.location.href = `products.html?search=${encodeURIComponent(value)}`;
+            }
+        }
+    });
+}
+
+
 
 const categoriesGrid = document.getElementById("categoriesGrid");
 
@@ -383,7 +397,7 @@ function addToCart(id) {
 function renderPopularProducts() {
     const popular = [...products]
         .sort((a, b) => b.rating - a.rating)
-        .slice(0, 6);
+        .slice(0, 8);
 
     popularEl.innerHTML = popular.map(productCard).join("");
 }
@@ -391,7 +405,7 @@ function renderPopularProducts() {
 /* ===== 2. YANGI (RANDOM 6) ===== */
 function renderNewProducts() {
     const shuffled = [...products].sort(() => 0.5 - Math.random());
-    const randomSix = shuffled.slice(0, 6);
+    const randomSix = shuffled.slice(0, 8);
 
     newEl.innerHTML = randomSix.map(productCard).join("");
 }

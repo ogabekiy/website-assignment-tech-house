@@ -2,12 +2,12 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>Mahsulotlar | Tech House</title>
+    <title>Xizmatlarimiz | Tech House</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/style.css">
 
-    <!-- Font Awesome (agar navbar/footer bo‘lsa) -->
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -15,11 +15,11 @@
 </head>
 <body>
 
-<!-- (ixtiyoriy) NAVBARni bu yerga qo‘yasan -->
+<!-- ===== NAVBAR (mavjud navbaringni shu yerga qo‘y) ===== -->
 
 <main class="container" style="margin-top:160px">
-        <!-- ===== FIXED NAVBAR ===== -->
-   <header class="navbar">
+
+      <header class="navbar">
 
         <!-- Top bar -->
         <div class="top-bar">
@@ -71,35 +71,99 @@
 
     </header>
 
-    <h1 style="margin-bottom:30px">Mahsulotlar</h1>
+    <section class="services-hero">
+        <h1>Bizning xizmatlarimiz</h1>
+        <p>
+            Tech House — zamonaviy elektronika va maishiy texnika bo‘yicha
+            to‘liq xizmatlar majmuasini taqdim etadi.
+        </p>
+    </section>
 
-    <div class="products-layout">
+    <section class="services-grid">
 
-        <!-- LEFT: FILTER -->
-        <aside class="products-filter">
-            <h3>Kategoriyalar</h3>
-            <ul id="categoryList"></ul>
-        </aside>
+        <!-- Service 1 -->
+        <div class="service-card">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <h3>O‘rnatib berish xizmati</h3>
+            <p>
+                Xarid qilingan texnikalar malakali mutaxassislar tomonidan
+                xavfsiz va to‘g‘ri tarzda o‘rnatib beriladi.
+            </p>
+        </div>
 
-        <!-- RIGHT: PRODUCTS -->
-        <section class="products-content">
+        <!-- Service 2 -->
+        <div class="service-card">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>Yetkazib berish</h3>
+            <p>
+                Toshkent va viloyatlar bo‘ylab tezkor, ehtiyotkor va ishonchli
+                yetkazib berish xizmati.
+            </p>
+        </div>
 
-            <input
-                type="text"
-                id="searchInput"
-                class="search-input"
-                placeholder="Mahsulotni qidirish..."
-            >
+        <!-- Service 3 -->
+        <div class="service-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Kafolat va servis</h3>
+            <p>
+                Barcha mahsulotlar rasmiy kafolatga ega bo‘lib,
+                servis xizmati orqali qo‘llab-quvvatlanadi.
+            </p>
+        </div>
 
-            <div class="products-grid" id="productsGrid"></div>
+        <!-- Service 4 -->
+        <div class="service-card">
+            <i class="fa-solid fa-rotate"></i>
+            <h3>Qaytarish va almashtirish</h3>
+            <p>
+                Mahsulot mos kelmagan yoki nosoz bo‘lsa,
+                belgilangan muddatda qaytarish yoki almashtirish mumkin.
+            </p>
+        </div>
 
-        </section>
+        <!-- Service 5 -->
+        <div class="service-card">
+            <i class="fa-solid fa-headset"></i>
+            <h3>Texnik maslahat</h3>
+            <p>
+                Mutaxassislarimiz mahsulot tanlashda va foydalanishda
+                sizga bepul maslahat beradi.
+            </p>
+        </div>
 
-    </div>
+        <!-- Service 6 -->
+        <div class="service-card">
+            <i class="fa-solid fa-building"></i>
+            <h3>Korxonalar uchun xizmatlar</h3>
+            <p>
+                Ofis va tashkilotlar uchun texnika ta’minoti,
+                maxsus narxlar va shartnomaviy xizmatlar.
+            </p>
+        </div>
 
-    
+        <!-- Service 7 -->
+        <div class="service-card">
+            <i class="fa-solid fa-credit-card"></i>
+            <h3>Qulay to‘lovlar</h3>
+            <p>
+                Naqd, karta va bo‘lib to‘lash imkoniyatlari
+                orqali qulay xarid qilish sharoitlari.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="services-cta">
+        <h2>Savollaringiz bormi?</h2>
+        <p>
+            Biz bilan bog‘laning — mutaxassislarimiz sizga yordam berishga tayyor.
+        </p>
+        <a href="contact.html" class="btn primary">Bog‘lanish</a>
+    </section>
 
 </main>
+
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
     <div class="container footer-grid">
 
@@ -152,9 +216,6 @@
     </div>
 </footer>
 
-<!-- (ixtiyoriy) FOOTER -->
 
-<script src="./js/data.js"></script>
-<script src="./js/products.js"></script>
 </body>
 </html>

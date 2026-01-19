@@ -2,12 +2,12 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>Mahsulotlar | Tech House</title>
+    <title>Aloqa | Tech House</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/style.css">
 
-    <!-- Font Awesome (agar navbar/footer bo‘lsa) -->
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -15,11 +15,7 @@
 </head>
 <body>
 
-<!-- (ixtiyoriy) NAVBARni bu yerga qo‘yasan -->
-
-<main class="container" style="margin-top:160px">
-        <!-- ===== FIXED NAVBAR ===== -->
-   <header class="navbar">
+ <header class="navbar">
 
         <!-- Top bar -->
         <div class="top-bar">
@@ -71,35 +67,78 @@
 
     </header>
 
-    <h1 style="margin-bottom:30px">Mahsulotlar</h1>
+<main class="container" style="margin-top:160px">
 
-    <div class="products-layout">
+    <!-- HERO -->
+    <section class="contact-hero">
+        <h1>Biz bilan bog‘laning</h1>
+        <p>
+            Savollaringiz bormi yoki maslahat kerakmi?
+            Tech House jamoasi sizga yordam berishga tayyor.
+        </p>
+    </section>
 
-        <!-- LEFT: FILTER -->
-        <aside class="products-filter">
-            <h3>Kategoriyalar</h3>
-            <ul id="categoryList"></ul>
-        </aside>
+    <section class="contact-wrapper">
 
-        <!-- RIGHT: PRODUCTS -->
-        <section class="products-content">
+        <!-- CONTACT INFO -->
+        <div class="contact-info">
 
-            <input
-                type="text"
-                id="searchInput"
-                class="search-input"
-                placeholder="Mahsulotni qidirish..."
-            >
+            <h2>Aloqa ma’lumotlari</h2>
 
-            <div class="products-grid" id="productsGrid"></div>
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <h4>Manzil</h4>
+                    <p>Toshkent shahri, O‘zbekiston</p>
+                </div>
+            </div>
 
-        </section>
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <h4>Telefon</h4>
+                    <p>+998 90 567 07 33</p>
+                </div>
+            </div>
 
-    </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <h4>Email</h4>
+                    <p>info@techhouse.uz</p>
+                </div>
+            </div>
 
-    
+            <div class="contact-item">
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                    <h4>Ish vaqti</h4>
+                    <p>Dushanba – Shanba: 09:00 – 19:00</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="contact-form">
+            <h2>Xabar yuborish</h2>
+
+            <form>
+                <input type="text" placeholder="Ismingiz" required>
+                <input type="email" placeholder="Email manzilingiz" required>
+                <input type="tel" placeholder="Telefon raqamingiz">
+                <textarea rows="5" placeholder="Xabaringiz..." required></textarea>
+
+                <button type="submit" class="btn primary">
+                    Xabar yuborish
+                </button>
+            </form>
+        </div>
+
+    </section>
 
 </main>
+
 <footer class="footer">
     <div class="container footer-grid">
 
@@ -152,9 +191,5 @@
     </div>
 </footer>
 
-<!-- (ixtiyoriy) FOOTER -->
-
-<script src="./js/data.js"></script>
-<script src="./js/products.js"></script>
 </body>
 </html>
