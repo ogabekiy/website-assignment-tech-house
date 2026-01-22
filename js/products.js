@@ -39,16 +39,22 @@ function renderProducts(list) {
     list.forEach(p => {
         productsGrid.innerHTML += `
             <div class="product-card">
-                <a href="product.html?id=${p.id}" style="text-decoration: none;">
+                <a href="product.html?id=${p.id}" class="product-link">
                     <img src="${p.img_url}" alt="${p.name}">
                     <h3>${p.name}</h3>
                     <p class="price">${p.price.toLocaleString()} so'm</p>
                     <p class="stock">Omborda: ${p.stock} ta</p>
                 </a>
+
+                <!-- 🛒 SAVATGA QO‘SHISH -->
+                <button class="add-to-cart" onclick="addToCart(${p.id})">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
             </div>
         `;
     });
 }
+
 
 /* ===== FILTER ===== */
 function selectCategory(catId) {
@@ -81,3 +87,27 @@ searchInput.addEventListener("input", applyFilters);
 /* ===== INIT ===== */
 renderCategories();
 applyFilters();
+
+function addToCart(id) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const product = products.find(p => p.id === id);
+    if (!product) return;
+
+    const item = cart.find(p => p.id === id);
+
+    if (item) {
+        item.qty += 1;
+    } else {
+        cart.push({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            img_url: product.img_url,
+            qty: 1
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Mahsulot savatga qo‘shildi ✅");
+}

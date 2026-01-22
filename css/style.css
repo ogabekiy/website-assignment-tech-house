@@ -1354,3 +1354,43 @@ h1 {
         gap: 18px;
     }
 }
+
+.product-card {
+    position: relative;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.add-to-cart {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+
+    background: #e0f2fe;        /* och ko‘k */
+    color: #0284c7;             /* icon rangi */
+    border: 1px solid #bae6fd;
+
+    padding: 8px 14px;
+    border-radius: 8px;         /* yumaloq emas, radiusli */
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.add-to-cart:hover {
+    background: #bae6fd;
+    color: #0369a1;
+    transform: scale(1.05);
+}
+
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+}
