@@ -17,6 +17,8 @@ if (!product) {
 function renderProduct(p) {
     const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
     const liked = favourites.includes(p.id);
+    console.log(p);
+    const finalPrice = Math.round(p.price - (p.price * p.discount) / 100);
 
     productDetail.innerHTML = `
         <div>
@@ -26,7 +28,10 @@ function renderProduct(p) {
         <div class="product-info">
             <h1>${p.name}</h1>
             <div>⭐ ${p.rating}</div>
-            <div class="price">${p.price.toLocaleString()} so'm</div>
+           <div class="price">
+    ${finalPrice.toLocaleString()} so'm
+</div>
+
             <div class="stock">Omborda: ${p.stock} ta</div>
 
             <div class="product-actions">

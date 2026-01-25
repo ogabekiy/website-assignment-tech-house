@@ -12,6 +12,7 @@ const products = [
         name: "Karcher VC 3 Vacuum Cleaner",
         price: 3200000,
         rating: 4.6,
+        discount: 10,
         stock: 12,
         img_url: "../images/changyutgichlar/karcher.png",
         categoryId: 1
@@ -21,6 +22,7 @@ const products = [
         name: "LG VK76 Vacuum Cleaner",
         price: 2800000,
         rating: 4.4,
+        discount: 10,
         stock: 9,
         img_url: "../images/changyutgichlar/lg.png",
         categoryId: 1
@@ -29,6 +31,7 @@ const products = [
         id: 3,
         name: "Philips PowerPro Compact",
         price: 3500000,
+        discount: 10,
         rating: 4.8,
         stock: 15,
         img_url: "../images/changyutgichlar/philips.png",
@@ -39,6 +42,7 @@ const products = [
         name: "Samsung Bagless Vacuum Cleaner",
         price: 3000000,
         rating: 4.5,
+        discount: 10,
         stock: 10,
         img_url: "../images/changyutgichlar/samsung.png",
         categoryId: 1
@@ -49,6 +53,7 @@ const products = [
         price: 3700000,
         rating: 4.7,
         stock: 7,
+        discount: 10,
         img_url: "../images/changyutgichlar/tefal.png",
         categoryId: 1
     },
@@ -57,6 +62,7 @@ const products = [
         name: "Artel Electric Heater 2000W",
         price: 890000,
         rating: 4.2,
+        discount: 10,
         stock: 20,
         img_url: "../images/isitgichlar/artel.png",
         categoryId: 2
@@ -66,6 +72,7 @@ const products = [
         name: "Avalon Oil Heater",
         price: 1150000,
         rating: 4.3,
+        discount: 10,
         stock: 14,
         img_url: "../images/isitgichlar/avalon.png",
         categoryId: 2
@@ -75,6 +82,7 @@ const products = [
         name: "Ferre Infrared Heater",
         price: 980000,
         rating: 4.1,
+        discount: 10,
         stock: 18,
         img_url: "../images/isitgichlar/ferre.png",
         categoryId: 2
@@ -84,6 +92,7 @@ const products = [
         name: "Shivaki Fan Heater",
         price: 760000,
         rating: 4.0,
+        discount: 10,
         stock: 25,
         img_url: "../images/isitgichlar/shivaki.png",
         categoryId: 2
@@ -92,6 +101,7 @@ const products = [
         id: 10,
         name: "Sirius Wall Heater",
         price: 1350000,
+        discount: 10,
         rating: 4.4,
         stock: 11,
         img_url: "../images/isitgichlar/sirius.png",
@@ -102,6 +112,7 @@ const products = [
         name: "Artel No Frost Refrigerator",
         price: 6500000,
         rating: 4.5,
+        discount: 10,
         stock: 8,
         img_url: "../images/muzlatgichlar/artel.png",
         categoryId: 3
@@ -111,6 +122,7 @@ const products = [
         name: "Haier Double Door Refrigerator",
         price: 7200000,
         rating: 4.6,
+        discount: 10,
         stock: 6,
         img_url: "../images/muzlatgichlar/haier.png",
         categoryId: 3
@@ -120,6 +132,7 @@ const products = [
         name: "LG Smart Inverter Refrigerator",
         price: 7800000,
         rating: 4.7,
+        discount: 10,
         stock: 5,
         img_url: "../images/muzlatgichlar/lg.png",
         categoryId: 3
@@ -130,6 +143,7 @@ const products = [
         price: 5900000,
         rating: 4.3,
         stock: 9,
+        discount: 10,
         img_url: "../images/muzlatgichlar/premier.png",
         categoryId: 3
     },
@@ -138,6 +152,7 @@ const products = [
         name: "Samsung Digital Inverter Refrigerator",
         price: 8200000,
         rating: 4.8,
+        discount: 10,
         stock: 4,
         img_url: "../images/muzlatgichlar/samsung.png",
         categoryId: 3
@@ -147,6 +162,7 @@ const products = [
         name: "Acer Aspire 5 Laptop",
         price: 7400000,
         rating: 4.4,
+        discount: 10,
         stock: 13,
         img_url: "../images/noutbuklar/acer.png",
         categoryId: 4
@@ -155,6 +171,7 @@ const products = [
         id: 17,
         name: "Asus VivoBook Laptop",
         price: 7800000,
+        discount: 10,
         rating: 4.5,
         stock: 10,
         img_url: "../images/noutbuklar/asus.png",
@@ -165,6 +182,7 @@ const products = [
         name: "HP Pavilion Laptop",
         price: 8200000,
         rating: 4.6,
+        discount: 10,
         stock: 8,
         img_url: "../images/noutbuklar/hp.png",
         categoryId: 4
@@ -174,6 +192,7 @@ const products = [
         name: "Lenovo IdeaPad Laptop",
         price: 7600000,
         rating: 4.4,
+        discount: 10,
         stock: 11,
         img_url: "../images/noutbuklar/lenovo.png",
         categoryId: 4
@@ -182,6 +201,7 @@ const products = [
         id: 20,
         name: "Apple MacBook Air M1",
         price: 12500000,
+        discount: 10,
         rating: 4.9,
         stock: 5,
         img_url: "../images/noutbuklar/macbook.png",
@@ -193,6 +213,7 @@ const products = [
         price: 3800000,
         rating: 4.3,
         stock: 16,
+        discount: 10,
         img_url: "../images/telefonlar/honor.png",
         categoryId: 5
     },
@@ -201,6 +222,7 @@ const products = [
         name: "Huawei Nova Smartphone",
         price: 4200000,
         rating: 4.4,
+        discount: 10,
         stock: 14,
         img_url: "../images/telefonlar/huawei.png",
         categoryId: 5
@@ -209,6 +231,7 @@ const products = [
         id: 23,
         name: "Infinix Note Smartphone",
         price: 3100000,
+        discount: 10,
         rating: 4.2,
         stock: 20,
         img_url: "../images/telefonlar/infinix.png",
@@ -218,6 +241,7 @@ const products = [
         id: 24,
         name: "Apple iPhone 15 Pro",
         price: 13800000,
+        discount: 10,
         rating: 4.9,
         stock: 7,
         img_url: "../images/telefonlar/iphone17.png",
@@ -227,6 +251,7 @@ const products = [
         id: 25,
         name: "Samsung Galaxy S Series",
         price: 9600000,
+        discount: 10,
         rating: 4.7,
         stock: 9,
         img_url: "../images/telefonlar/samsung.png",
@@ -237,6 +262,7 @@ const products = [
         name: "Tecno Spark Smartphone",
         price: 2900000,
         rating: 4.1,
+        discount: 10,
         stock: 22,
         img_url: "../images/telefonlar/tecno.png",
         categoryId: 5
@@ -246,6 +272,7 @@ const products = [
         name: "Xiaomi Redmi Smartphone",
         price: 3400000,
         rating: 4.5,
+        discount: 10,
         stock: 18,
         img_url: "../images/telefonlar/xiamoi.png",
         categoryId: 5
@@ -255,6 +282,7 @@ const products = [
         name: "Haier Smart LED TV",
         price: 5400000,
         rating: 4.4,
+        discount: 10,
         stock: 6,
         img_url: "../images/televizorlar/haier.png",
         categoryId: 6
@@ -263,6 +291,7 @@ const products = [
         id: 29,
         name: "Hisense UHD Smart TV",
         price: 6200000,
+        discount: 10,
         rating: 4.5,
         stock: 5,
         img_url: "../images/televizorlar/hisense.png",
@@ -272,6 +301,7 @@ const products = [
         id: 30,
         name: "LG OLED Smart TV",
         price: 9800000,
+        discount: 10,
         rating: 4.8,
         stock: 3,
         img_url: "../images/televizorlar/lg.png",
@@ -282,6 +312,7 @@ const products = [
         name: "Premier HD LED TV",
         price: 4800000,
         rating: 4.2,
+        discount: 10,
         stock: 7,
         img_url: "../images/televizorlar/premeir.png",
         categoryId: 6
@@ -290,6 +321,7 @@ const products = [
         id: 32,
         name: "Samsung QLED Smart TV",
         price: 10500000,
+        discount: 10,
         rating: 4.9,
         stock: 4,
         img_url: "../images/televizorlar/samsung.png",
@@ -325,6 +357,11 @@ function renderCategories() {
         `;
     });
 }
+function getDiscountPrice(p) {
+    if (!p.discount || p.discount === 0) return p.price;
+    return Math.round(p.price - (p.price * p.discount) / 100);
+}
+
 function goToCategory(categoryId) {
     window.location.href = `products.html?category=${categoryId}`;
 }
@@ -352,13 +389,27 @@ function renderStars(rating) {
 
 /* ===== PRODUCT CARD ===== */
 function productCard(p) {
+    const finalPrice = getDiscountPrice(p);
+
     return `
         <div class="product-card">
+            ${p.discount ? `<span class="discount-badge">-${p.discount}%</span>` : ""}
+
             <a href="product.html?id=${p.id}" style="text-decoration:none">
                 <img src="${p.img_url}" alt="${p.name}">
                 <h3>${p.name}</h3>
+
                 <div class="stars">${renderStars(p.rating)}</div>
-                <p class="price">${p.price.toLocaleString()} so'm</p>
+
+                <div class="price-box">
+                    ${
+                        p.discount
+                            ? `<span class="old-price">${p.price.toLocaleString()} so'm</span>
+                               <span class="new-price">${finalPrice.toLocaleString()} so'm</span>`
+                            : `<span class="new-price">${p.price.toLocaleString()} so'm</span>`
+                    }
+                </div>
+
                 <p class="stock">Omborda: ${p.stock} ta</p>
             </a>
 
@@ -368,6 +419,7 @@ function productCard(p) {
         </div>
     `;
 }
+
 function addToCart(id) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 

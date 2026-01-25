@@ -37,6 +37,17 @@ function renderCategories() {
         `;
     });
 }
+function generateStars(rate) {
+    let stars = "";
+    for (let i = 1; i <= 5; i++) {
+        stars += i <= Math.round(rate)
+            ? `<i class="fa-solid fa-star"></i>`
+            : `<i class="fa-regular fa-star"></i>`;
+    }
+    return stars;
+}
+
+
 
 /* ===== RENDER PRODUCTS ===== */
 function renderProducts(list) {
@@ -48,12 +59,37 @@ function renderProducts(list) {
     }
 
     list.forEach(p => {
+        const finalPrice = p.discount
+            ? Math.round(p.price - (p.price * p.discount) / 100)
+            : p.price;
+
         productsGrid.innerHTML += `
             <div class="product-card">
+                
+                ${p.discount ? `<span class="discount-badge">-${p.discount}%</span>` : ""}
+
                 <a href="product.html?id=${p.id}" class="product-link">
                     <img src="${p.img_url}" alt="${p.name}">
+
                     <h3>${p.name}</h3>
-                    <p class="price">${p.price.toLocaleString()} so'm</p>
+
+                    <!-- ⭐ RATING -->
+                    <div class="rating">
+                        ${generateStars(p.rating)}
+                        <span class="rate-num">${p.rating}</span>
+                    </div>
+
+                    <!-- 💸 PRICE -->
+                    <div class="price-box">
+                        ${
+                            p.discount
+                                ? `<span class="old-price">${p.price.toLocaleString()} so'm</span>
+                                   <span class="new-price">${finalPrice.toLocaleString()} so'm</span>`
+                                : `<span class="new-price">${p.price.toLocaleString()} so'm</span>`
+                        }
+                    </div>
+
+                    <!-- 📦 STOCK -->
                     <p class="stock ${p.stock === 0 ? 'out-of-stock' : ''}">
                         ${p.stock === 0 ? 'Tugagan' : `Omborda: ${p.stock} ta`}
                     </p>
@@ -70,6 +106,7 @@ function renderProducts(list) {
         `;
     });
 }
+
 
 /* ===== FILTER ===== */
 function selectCategory(catId) {
@@ -186,12 +223,13 @@ function addToCart(id) {
         item.qty += 1;
     } else {
         cart.push({
-            id: product.id,
-            name: product.name,
-            price: product.price,
-            img_url: product.img_url,
-            qty: 1
-        });
+    id: product.id,
+    name: product.name,
+    price: getDiscountPrice(product), // 👈 shu
+    img_url: product.img_url,
+    qty: 1
+});
+
     }
 
     localStorage.setItem("cart", JSON.stringify(cart));

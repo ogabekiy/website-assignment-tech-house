@@ -264,6 +264,7 @@ body {
 }
 
 .product-card {
+
     background: #fff;
     border-radius: 18px;
     padding: 16px;
@@ -289,6 +290,65 @@ body {
     font-weight: 600;
     margin-bottom: 6px;
 }
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #e63946;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 7px;
+    border-radius: 6px;
+    font-weight: bold;
+    z-index: 2;
+}
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff3b3b;
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.rating {
+    color: gold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 6px;
+}
+.new-price {
+    color: #0a7cff;
+    font-weight: bold;
+}
+
+.price-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 13px;
+}
+
+.new-price {
+    color: #e63946;
+    font-weight: bold;
+    font-size: 16px;
+}
+
 
 .price {
     font-weight: 700;
@@ -1438,4 +1498,86 @@ h1 {
 .product-link {
     text-decoration: none;
     color: inherit;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #e63946;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 7px;
+    border-radius: 6px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.price-box {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 13px;
+}
+
+.new-price {
+    color: #e63946;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.about-techhouse {
+    padding: 80px 20px;
+    background: #f9fafb;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: #111827;
+}
+
+.about-text p {
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.stat {
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.stat h3 {
+    font-size: 28px;
+    color: #2563eb;
+    margin-bottom: 6px;
+}
+
+.stat span {
+    font-size: 14px;
+    color: #6b7280;
 }
